@@ -1,21 +1,21 @@
-name: 主力盘口&五维看股自动化
-on:
-schedule:
-- cron: '*/15 * * * *'
-- cron: '0 18 * * *'
+Python main.py：跑
+在……之上姓名
+计划表:
+- 克朗: '*/15 * * * *'
+- 克朗: '0 18 * * *'
 workflow_dispatch:
  
-jobs:
-run:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v4
+工作:
+跑:
+连续的：Ubuntu-最新
+步骤:
+- uses: 操作/结帐@v4
 - uses: actions/setup-python@v5
-with:
-python-version: '3.11'
-- name: 安装依赖
-run: pip install akshare requests pandas matplotlib
-- name: 运行监控&选股
+和……一起:
+python版: '3.11'
+-姓名：安装依赖
+跑: PIP安装pandasakshare请求python-dotenvmatplotlib
+-姓名：运行监控&选股
 env:
-SEND_KEY: ${{ secrets.SEND_KEY }}
-run: python main.py
+send_KEY: ${{secrets.SEND_KEY}}
+跑: Python main.py
